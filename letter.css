@@ -413,11 +413,17 @@ body {
     }
 
     .letter {
+        background: repeating-linear-gradient(
+        to bottom,
+        #F0F0DB 0px,
+        #F0F0DB 27px,
+        #F0F0DB 28px
+    );
         width: 90vw !important;
         height: 70vh !important;
         max-height: 600px;
         min-height: auto !important;
-        padding: 33px 20px 35px 45px !important;
+        padding: 33px 20px 33px 45px !important;
         background-size: 100% 28px !important;
         position: relative;
         margin: auto;
@@ -571,6 +577,12 @@ body {
     }
 
     .letter {
+        background: repeating-linear-gradient(
+        to bottom,
+        #F0F0DB 0px,
+        #F0F0DB 27px,
+        #F0F0DB 28px
+    );
         width: 65vw !important;
         height: 80vh !important;
         max-width: 540px;
