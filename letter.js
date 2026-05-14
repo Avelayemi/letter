@@ -1,4 +1,4 @@
-const message = '   If  you  are  reading  this,  I  want  to  let  you  know  that  I  miss  talking  to  you  and  I  do  miss  you  a  lot.  It  made  me  wonder  if  you  feel  the  same.\n\n   I  assumed  that  maybe  you  were  just  busy,  so  I  decided  to  give  you  space.  I  realized  how  annoying  it  is  to  have  your  peace  disturbed.\n   I  also  realized  that  we  both  have  a  life  to  go  on  with,  so  please  spend  your  time  with  joy  and  enjoy  life.\n\n Even  though  I  do  have  many  things  to  say,  I  think  that  it  is  better  to  just  keep  them  to  myself,  to  keep  our  peace.\nI  hope  that  you  are  doing  well.\n\n\n\n                                                                          For Ian';
+const message = '   If you are reading this, I want you to know that I miss our night calls.  I miss watching you play your games.  I miss you.  But we both have lives to go on with.  It would be selfish to keep you awake when you need your sleep for work.\n   I assumed you were busy when you did not reply, and that is fine.  During these past days, I realized I cannot change who I am to be someone you might like.  I can only be me.  I am learning to see my own value and improve for myself.\n   I did not devote an entire week to this project just to impress you.  You know, we both live in completely different worlds, but I cannot hide my feelings.  Because I have finally learned to love the person I am, I have found the strength to love the person you are.  I am choosing to speak because I refuse to be silent about my own heart.\n   Speaking up lifts a huge weight off my shoulders.  I want you to know that my feelings for you are real.  It is fine if you do not feel the same, but there is one thing I want you to do, and it is to not be ignorant of your own heart.  I will hold onto these feelings for you until I have fully moved on.  When the time comes, I will let you know and never disturb your peace again.\n\nFor Ian';
 
 function showLetter() {
     document.getElementById("introText").style.opacity = 0;
@@ -33,12 +33,21 @@ function showLetter() {
 
         function typeWriter() {
             if (i < message.length) {
-                typedText.innerHTML += message.charAt(i);
-                i++;
-                setTimeout(typeWriter, 30);
+                // This checks if the current part of the text is "For Ian"
+                const remainingText = message.substring(i);
+                
+                if (remainingText.startsWith("For Ian")) {
+                    // Create a span to force alignment and prevent the word break
+                    const signature = '<span style="display: block; text-align: right; width: 100%;">For Ian</span>';
+                    typedText.innerHTML += signature;
+                    i = message.length; // Stop the loop since we reached the end
+                } else {
+                    typedText.innerHTML += message.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 30);
+                }
             }
         }
-
         typeWriter();
     }, 1200);
 }

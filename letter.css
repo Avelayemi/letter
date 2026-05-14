@@ -233,9 +233,9 @@ body {
     color: #343434;
     padding: 33px 30px 30px 50px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-    height: 600px;
+    width: 100%;
+    max-width: 550px;
+    height: 640px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 3);
     font-size: 1.1rem;
     line-height: 1.6;
@@ -348,4 +348,276 @@ body {
     right: 50%;
     width: 1300px;
     animation-delay: 0.01s;
+}
+
+/* 1. UPRIGHT VIEW (Portrait) */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    /* Prevent the background from moving */
+    html, body {
+        overflow: hidden;
+        overflow-y: clip;
+        height: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .intro {
+        text-align: center;
+        font-size: 2.3rem;
+        margin-bottom: 25px;
+        top: -4%;
+        opacity: 1;
+        transition: opacity 1s ease;
+        position: relative;
+        display: inline-block;
+        z-index: 10;
+    }
+    .intro::after {
+        content: "";
+        position: absolute;
+        bottom: -11px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 125%;
+        height: 2.5px;
+        background-color: #F0F0DB;
+        border-radius: 4px;
+        z-index: 10;
+    }
+
+    .button {
+        padding: 15px 40px;
+        font-size: 1.35rem;
+        color: #F0F0DB;
+        font-family: "Optima", sans-serif;
+        cursor: pointer;
+        border-radius: 50px;
+        position: relative;
+        top: -4%;
+        z-index: 20;
+        transition: all 0.3s ease;
+        border: none;
+        background: transparent;
+        box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introPic {
+        position: absolute;
+        opacity: 1 !important;
+        transition: opacity 1.3s ease-in, transform 1.3s ease-in !important;
+        pointer-events: none;
+        z-index: 0;
+        animation: none;
+    }
+
+    .letter {
+        width: 90vw !important;
+        height: 70vh !important;
+        max-height: 600px;
+        min-height: auto !important;
+        padding: 33px 20px 35px 45px !important;
+        background-size: 100% 28px !important;
+        position: relative;
+        margin: auto;
+    }
+    .letter::before {
+        background-size: 20px 28px !important;
+    }
+    #typedText {
+        font-size: 0.975rem !important;
+        line-height: 28px !important;
+        height: 100%;
+        overflow-y: auto !important;
+        padding-right: 8px;
+        scrollbar-width: none;
+    }
+    #typedText::-webkit-scrollbar {
+        display: none;
+    } 
+
+    /* Individual Intro Image Controls */
+    /* 1 to 6 */
+    #img_1 { top: 53%; right: 2.5%; width: 700px; transform: rotate(5deg) !important; }
+    #img_2 { top: -9%; right: -5.5%; width: 830px; transform: rotate(26deg) !important; }
+    #img_3 { top: 64%; right: 25%; width: 580px; transform: rotate(-17deg) !important; }
+    #img_4 { top: -4.5%; right: 10%; width: 490px; transform: rotate(-3deg) !important; }
+    #img_5 { top: 76%; right: 13%; width: 570px; transform: rotate(-2deg) !important; }
+    #img_6 { top: 74%; right: 30.5%; width: 530px !important; }
+    /* 7 to 11 */
+    #img_7 { top: 55%; left: -8%; width: 780px; transform: rotate(28deg) !important; }
+    #img_8 { top: 45%; left: 50%; width: 370px !important; }
+    #img_9 { top: 58%; left: 34%; width: 390px !important; }
+    #img_10 { top: 63%; left: 19%; width: 580px !important; }
+    #img_11 { top: 45%; left: -16%; width: 1000px !important; }
+    /* Images 1-6 slide left */
+    #img_1.slide-left {
+        transform: translateX(-150vw) !important;
+        opacity: 0;
+        transition-delay: 0.095s !important;
+    }
+    #img_2.slide-left {
+        transform: translateX(-150vw) !important;
+        opacity: 0;
+        transition-delay: 0.1s !important;
+    }
+    #img_3.slide-left {
+        transform: translateX(-150vw) !important;
+        opacity: 0;
+        transition-delay: 0.01s !important;
+    }
+    #img_4.slide-left {
+        transform: translateX(-150vw) !important;
+        opacity: 0;
+        transition-delay: 0.09s !important;
+    }
+    #img_5.slide-left {
+        transform: translateX(-150vw) !important;
+        opacity: 0;
+        transition-delay: 0.06s !important;
+    }
+    #img_6.slide-left {
+        transform: translateX(-150vw) !important; 
+        opacity: 0;
+        transition-delay: 0.025s !important;
+    }
+    /* Images 7-11 slide right */
+    #img_7.slide-right {
+        transform: translateX(150vw) !important;
+        opacity: 0;
+        transition-delay: 0.1s !important;
+    }
+    #img_8.slide-right {
+        transform: translateX(150vw) !important;
+        opacity: 0;
+        transition-delay: 0.06s !important;
+    }
+    #img_9.slide-right {
+        transform: translateX(150vw) !important;
+        opacity: 0;
+        transition-delay: 0.075s !important;
+    }
+    #img_10.slide-right {
+        transform: translateX(150vw) !important;
+        opacity: 0;
+        transition-delay: 0.095s !important;
+    }
+    #img_11.slide-right {
+        transform: translateX(150vw) !important;
+        opacity: 0;
+        transition-delay: 0.03s !important;
+    }
+
+    /* Individual Main/Fish Image Controls */
+    #fish_dolphin { top: -1%; left: 62%; width: 300px !important; }
+    #fish_bubbles { top: 2%; left: 30%; width: 190px !important; }
+    #fish_whale { top: -5%; right: -76%; width: 1400px !important; }
+    #fish_schooloffish { top: 12%; right: 64%; width: 160px !important; }
+    #fish_tree { bottom: -8%; right: -19%; width: 780px !important; }
+    #fish_seasheal { bottom: -5.5%; right: 33%; width: 280px !important; }
+    #fish_seaweed { bottom: -6%; right: -13%; width: 890px !important; }
+}
+
+/* 2. SIDEWAY VIEW (Landscape) */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    /* Kill scroll and empty space */
+    html, body {
+        overflow: hidden !important;
+        height: 100%;
+    }
+
+    .intro {
+        text-align: center;
+        font-size: 2.3rem;
+        margin-bottom: 25px;
+        top: 2%;
+        opacity: 1;
+        transition: opacity 1s ease;
+        position: relative;
+        display: inline-block;
+        z-index: 10;
+    }
+    .intro::after {
+        content: "";
+        position: absolute;
+        bottom: -11px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 125%;
+        height: 2.5px;
+        background-color: #F0F0DB;
+        border-radius: 4px;
+        z-index: 10;
+    }
+
+    .button {
+        padding: 15px 40px;
+        font-size: 1.35rem;
+        color: #F0F0DB;
+        font-family: "Optima", sans-serif;
+        cursor: pointer;
+        border-radius: 50px;
+        position: relative;
+        top: 2.5%;
+        z-index: 20;
+        transition: all 0.3s ease;
+        border: none;
+        background: transparent;
+        box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .letter {
+        width: 65vw !important;
+        height: 80vh !important;
+        max-width: 540px;
+        padding: 0 !important;
+        margin: auto;
+        overflow: hidden !important;
+        position: relative;
+    }
+
+    #typedText {
+        font-size: 0.9rem !important;
+        line-height: 28px !important; 
+        height: 100%;
+        overflow-y: auto !important;
+        scrollbar-width: none;
+        
+        /* Match the desktop padding exactly */
+        padding: 37px 50px 15px 58px !important; 
+        background: transparent !important;
+    }
+
+    /* Individual Intro Image Controls for Sideview */
+    /* 1 to 6 */
+    #img_1 { top: 2%; right: 49%; width: 740px !important; }
+    #img_2 { top: 13%; right: 50%; width: 730px !important; }
+    #img_3 { top: 23%; right: 60%; width: 705px !important; }
+    #img_4 { top: -8%; right: 59%; width: 500px !important; }
+    #img_5 { top: 54%; right: 58%; width: 550px !important; }
+    #img_6 { top: 54%; right: 67%; width: 500px !important; }
+    /* 7 to 11 */
+    #img_7 { top: 0; left: 37%; width: 890px !important; }
+    #img_8 { top: -2%; left: 67%; width: 450px !important; }
+    #img_9 { top: 18%; left: 55%; width: 520px !important; }
+    #img_10 { top: 38%; left: 53%; width: 570px !important; }
+    #img_11 { top: -1%; left: 49%; width: 850px !important; }
+
+    /* Individual Main/Fish Image Controls for Sideview */
+    #fish_dolphin { top: -3%; left: 80%; width: 330px !important; }
+    #fish_bubbles { top: -2%; left: 57%; width: 280px !important; }
+    #fish_whale { top: -30%; right: -16%; width: 1200px !important; }
+    #fish_schooloffish { top: 36%; right: 3%; width: 250px !important; }
+    #fish_tree { bottom: -16%; right: 53%; width: 620px !important; }
+    #fish_seasheal { bottom: -9%; right: 75%; width: 220px !important; }
+    #fish_seaweed { bottom: -10%; right: 61%; width: 650px !important; }
+
+    .intro h1 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
 }
