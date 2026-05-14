@@ -600,7 +600,7 @@ body {
         scrollbar-width: none;
         
         /* Match the desktop padding exactly */
-        padding: 37px 50px 15px 58px !important; 
+        padding: 35px 50px 35px 58px !important; 
         background: transparent !important;
     }
 
