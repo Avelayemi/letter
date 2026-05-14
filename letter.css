@@ -413,12 +413,7 @@ body {
     }
 
     .letter {
-        background: repeating-linear-gradient(
-        to bottom,
-        #F0F0DB 0px,
-        #F0F0DB 27px,
-        #F0F0DB 28px
-    );
+        background: #F0F0DB !important;
         width: 90vw !important;
         height: 70vh !important;
         max-height: 600px;
@@ -577,12 +572,7 @@ body {
     }
 
     .letter {
-        background: repeating-linear-gradient(
-        to bottom,
-        #F0F0DB 0px,
-        #F0F0DB 27px,
-        #F0F0DB 28px
-    );
+        background: #F0F0DB !important;
         width: 65vw !important;
         height: 80vh !important;
         max-width: 540px;
