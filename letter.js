@@ -1,4 +1,4 @@
-const message = '   Hello to Ian, I just want to say that you are being too nonchalant but that is fine.\n   Also just to let you know again, I appreciated your kindness of letting me be your friend. I am happy to be just friend.\n.  The feeling of liking you felt like nightmare. Since you have always been such a jerk, liking you would just be a mistake. Don't even talk about loving you, that would have been a real nightmare. Thank god.\n   That is all, I hope you understand what I am saying now and fuck you.\n\nFor Ian';
+const message = '   Hello to Ian, I just want to say that you are being too nonchalant but that is fine.\n   Also just to let you know again, I appreciated your kindness of letting me be your friend. I am happy to be just friend.\n.  The feeling of liking you felt like nightmare. Since you have always been such a jerk, liking you would just be a mistake. Do not even talk about loving you, that would have been a real nightmare. Thank god.\n   That is all, I hope you understand what I am saying now and fuck you.\n\nFor Ian';
 
 function showLetter() {
     document.getElementById("introText").style.opacity = 0;
