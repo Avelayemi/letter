@@ -243,7 +243,7 @@ body {
     position: relative;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    font-family: "Snell Roundhand", cursive;
+    font-family: "Optima", sans-serif;
     overflow: visible;
     z-index: 10;
 }
